@@ -26,11 +26,10 @@ function listaproductotabla(producto) {
 }
 
 Barrabuscadora.addEventListener("search", ()=> {
-    if (Barrabuscadora.value.trim() !== "") {
-        let arrayResultante = productoscoderpantabla.filter((producto)=> producto.name.toLowerCase().includes(Barrabuscadora.value.trim().toLowerCase()))
-        cargaproducto(arrayResultante)
-    }
+    let arrayResultante = productoscoderpantabla.filter((producto)=> producto.name.toLowerCase().includes(Barrabuscadora.value.trim().toLowerCase()))
+    cargaproducto(arrayResultante)
 })
+
 
 function botonfav() {
     const botones = document.querySelectorAll('button.button.button-big-emoji')
@@ -73,7 +72,6 @@ function listaProductoCard(producto) {
 
 
 BarraBCard.addEventListener('search', ()=> {
-    localStorage.setItem("ultimaBusqueda", mensaje.value)
     const resultado = productoscoderpancard.filter((producto)=> producto.nombre.toLowerCase().includes(BarraBCard.value.toLowerCase()))
     cargaPcard(resultado)
 })
