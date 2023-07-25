@@ -26,7 +26,7 @@ function listaproductotabla(producto) {
 }
 
 Barrabuscadora.addEventListener("search", ()=> {
-    let arrayResultante = productoscoderpantabla.filter((producto)=> producto.name.toLowerCase().includes(Barrabuscadora.value.toLowerCase()))
+    const arrayResultante = productoscoderpantabla.filter((producto)=> producto.name.toLowerCase().includes(Barrabuscadora.value.toLowerCase()))
     cargaproducto(arrayResultante)
 })
 
